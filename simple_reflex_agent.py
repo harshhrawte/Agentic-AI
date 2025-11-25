@@ -53,14 +53,11 @@ for step in range(steps):
     current_room = rooms[agent_index] 
     state = environment[current_room] 
     action = reflex_agent(state) 
-
     draw_environment(environment, agent_index, step + 1) 
-
     if action == "Clean":
         environment[current_room] = "Clean"
     else:
         agent_index = (agent_index + 1) % len(rooms) 
-
-
+        
 plt.ioff() 
 print(" Simulation complete!") 
