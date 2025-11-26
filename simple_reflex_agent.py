@@ -1,21 +1,18 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import time
-
 environment = {
     "Room1": "Clean",
     "Room2": "Dirty",   
     "Room3": "Clean",
     "Room4": "Clean"
 }
-
 room_positions = {
     "Room1": (0, 1),  
     "Room2": (1, 1),  
     "Room3": (0, 0),  
     "Room4": (1, 0)  
 }
-
 rooms = list(environment.keys())  
 agent_index = 0  
 
@@ -43,7 +40,6 @@ def draw_environment(env, agent_pos, step):
     agent_x, agent_y = room_positions[rooms[agent_pos]] 
     agent_patch = patches.Circle((agent_x + 0.5, agent_y + 0.5), 0.1, color='blue') 
     ax.add_patch(agent_patch)
-
     plt.pause(1) 
     plt.close() 
 plt.ion()  
