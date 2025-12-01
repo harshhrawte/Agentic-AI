@@ -155,5 +155,5 @@ for episode in range(1, num_episodes + 1):
         if snake.collision(): 
             done = True
 
+    print("Thanks")
     print(f"Episode {episode} finished with Total Reward: {total_reward}")
-    
